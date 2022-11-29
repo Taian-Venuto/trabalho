@@ -1,0 +1,543 @@
+@import url(https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    font-family: 'Spartan', sans-serif;  
+}
+
+body{
+    font-family: 'Spartan', sans-serif;  
+    background: rgb(81,77,109);
+    background: linear-gradient(90deg, rgba(81,77,109,1) 0%, rgba(104,117,177,1) 51%, rgba(81,77,109,1) 100%);
+
+}
+
+/*Inicio navbar*/
+.img_logo_head{
+    width: 80px;
+    height: 80px;
+}
+.head,
+.navigation_head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+.head{
+    background: rgba(255, 255, 255, 0.637);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );   
+    border: 1px solid rgba(255, 255, 255, 0.699);
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 80px;
+}
+.navigation_head{
+    gap: 3em;
+    z-index: 2;
+}
+.content{
+    padding-top: 5em;
+    text-align: center;
+    height: 100vh;
+    transition: 0.5s;
+}
+.navigation_head a{
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+    z-index: 2000;
+}
+.navigation_head a:hover{
+    color: #5377ad;
+}
+.btn_icon_head{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navigation_head{
+        position: absolute;
+        flex-direction: column !important;
+        top: 0;
+        background: #9399beef;     
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+        z-index: 2000;
+    }
+    .btn_icon_head{
+        display: block;
+    }
+}
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    to {margin-left: -10vw;}
+}
+/*Fim da navbar*/
+
+/*Inicio do rodapé*/
+header {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 300px;
+    font-size: 35px;
+}
+/* The footer is fixed to the bottom of the page */
+footer {
+    position: relative;
+    bottom: 0;
+}
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+.footer-distributed {
+    background-color: #2f3139;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 30%;
+}
+.footer-distributed h3 {
+    color: #ffffff;
+    margin: 0;
+}
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+.footer-distributed .footer-center p span {
+    display: block;
+    line-height: 2;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer-distributed .footer-center p a {
+    color: #ffffff;
+    text-decoration: none;
+    ;
+}
+/* Footer Right */
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: none;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+/*Fim do rodapé*/
+
+.iconcentral{
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 50px;
+   height: 80px;
+   width: 80%;
+}
+
+.iconcentral a{
+    padding: 0 2%;
+}
+.prttitle h1{
+    color: #ffffff;
+    font-family: 'Spartan', sans-serif;  
+    margin-top: 80px;
+}
+
+.btenv{
+    background-color: white !important;
+    height: 36px;
+    width: 70px auto;
+    max-width: auto;
+    margin: -7px;
+    border-radius: 5px;
+}
+
+
+
+/*css da tabela*/
+table {
+    width: 60%;
+    height: 60%;
+    margin:0;
+    
+  }
+
+  table th, table td {
+    padding: 30px; /* Espaçamento inferior das tabelas*/
+    text-align: center;
+  
+  }
+
+  table th {
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+  @media screen and (max-width: 600px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      
+    }
+
+    table td {
+      display: block;
+      text-align: center;
+      font-size: 15px;
+
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+.bttt{
+    height: 38px;
+    width: 80px;
+    border:white;
+    border-radius: 6px;   
+  }
+
+ .bttt a:hover{
+    color: #2f71d4;
+} 
+
+.parallax { 
+    min-height: 500px; 
+    background: url(https://supatainment.com/wp-content/uploads/2022/08/RHCP-GettyImages-1412161742-1.jpg); 
+    background-size: 100%; 
+    max-width: 87%; 
+    height: 100%; 
+    background-position: center; 
+    border-radius: 20px; 
+    background-size: cover;
+  }
+
+  /*modal*/
+  button, select {
+    text-transform: none;
+  }
+  
+  button, input, select, textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+  }
+  
+  input {
+    line-height: normal;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  #container {
+    border: solid 3px #ffffff;
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+  }
+  
+  form {
+    padding: 37.5px;
+    margin: 50px 0;
+  }
+  
+  h1 {
+    color: #474544;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .underline {
+    border-bottom: solid 2px #474544;
+    margin: -0.512em auto;
+    width: 80px;
+  }
+  
+  .icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+  }
+  
+  .icon {
+    display: block;
+    fill: #474544;
+    height: 50px;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .email {
+      float: right;
+      width: 45%;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+      background: none;
+    border: none;
+      border-bottom: solid 2px #474544;
+      color: #474544;
+      font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+      margin: 0em 0 1.875em 0;
+      padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  input[type='text']:focus, [type='email']:focus, textarea:focus {
+      outline: none;
+      padding: 0 0 0.875em 0;
+  }
+  
+  .message {
+      float: none;
+  }
+  
+  .name {
+      float: left;
+      width: 45%;
+  }
+  
+  select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+   
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  .subject {
+    width: 100%;
+  }
+  
+  .telephone {
+    width: 100%;
+  }
+  
+  textarea {
+      line-height: 150%;
+      height: 150px;
+      resize: none;
+    width: 100%;
+  }
+  
+  ::-webkit-input-placeholder {
+      color: #474544;
+  }
+  
+  :-moz-placeholder { 
+      color: #474544;
+      opacity: 1;
+  }
+  
+  ::-moz-placeholder {
+      color: #474544;
+      opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+      color: #474544;
+  }
+  
+  #form_button {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  
+  #form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #container {
+      margin: 20px auto;
+      width: 95%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 26px;
+    }
+    
+    .underline {
+      width: 68px;
+    }
+    
+    #form_button {
+      padding: 15px 25px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    h1 {
+      font-size: 18px;
+    }
+    
+    .icon {
+      height: 35px;
+      width: 35px;
+    }
+    
+    .underline {
+      width: 53px;
+    }
+    
+    input[type='text'], [type='email'], select, textarea {
+      font-size: 0.875em;
+    }
+  }
